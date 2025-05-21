@@ -1,8 +1,21 @@
 @import 'tailwindcss';
 
+/* import af adobe-font */
+@import url("https://p.typekit.net/p.css?s=1&k=ndv8zye&ht=tk&f=35889&a=166098997&app=typekit&e=css");
+
+
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
+
+@font-face {
+font-family:"eds-market-narrow-slant";
+src:url("https://use.typekit.net/af/797c1b/00000000000000007735a9e5/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/797c1b/00000000000000007735a9e5/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/797c1b/00000000000000007735a9e5/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;
+font-style:normal;
+font-weight:400;
+font-stretch:normal;
+}
 
 @theme {
   /* Her tilføjes theme variable // tokens */
@@ -14,9 +27,24 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-gray-200, currentColor);}
+    /* styling af tekst */
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "eds-market-narrow-slant";
+    color: #000000;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
-}
+  }
+
+
 
 @layer components{
 
